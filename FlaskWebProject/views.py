@@ -12,8 +12,9 @@ def home():
     """Renders the home page."""
     return render_template(
         'index.html',
-        title='yoyoyoy',
-        year=datetime.now().year,
+        title='Multiple Choice',
+        theme=['ttm4137', 'test'],
+        year=datetime.now().year
     )
 
 @app.route('/contact')
