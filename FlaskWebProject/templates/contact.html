@@ -3,8 +3,28 @@
 {% block content %}
 
 <h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+{% if message != "" %}
+	<h3>{{ message }}</h3>
+{% endif %}
 
+{% for question in formatted %}
+	<div class="jumbotron">
+		{% for item in question %}
+			{% if loop.first %}
+				<p class="lead">{{ item }}</p>
+			{% elif params %}
+				{% for i in params %}
+					<p>{{ i }}</p>
+				{% endfor %}
+			{% elif loop.last %}
+				<!--  -->
+			{% else %}
+				<p><a href="/questions/{{ title }}?ans={{ item }}" class="btn btn-primary btn-large">{{ item }}</a></p>
+			{% endif %}
+		{% endfor %}
+	</div>
+{% endfor %}
+<!--
 <address>
     One Microsoft Way<br />
     Redmond, WA 98052-6399<br />
@@ -16,5 +36,5 @@
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
 </address>
-
+-->
 {% endblock %}
