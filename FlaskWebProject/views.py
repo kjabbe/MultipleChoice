@@ -10,10 +10,11 @@ from FlaskWebProject import app
 @app.route('/home')
 def home():
     """Renders the home page."""
+    themes = ['ttm4137', 'test']
     return render_template(
         'index.html',
         title='Multiple Choice',
-        themes = ['ttm4137', 'test'],
+        themes=themes,
         year=datetime.now().year
     )
 
