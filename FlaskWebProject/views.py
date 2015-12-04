@@ -10,16 +10,16 @@ from FlaskWebProject import app
 @app.route('/home')
 def home():
     """Renders the home page."""
-    themes = ['ttm4137', 'test']
+    themes = ['TTM4137', 'TTM4222', 'TTM4222', 'TTM4222', 'TTM4222', 'TTM4222', 'TTM4222', 'TTM4222', 'TTM4222', 'TTM4222']
     return render_template(
         'index.html',
         title='Multiple Choice',
-        themes=themes,
-        year=datetime.now().year
+        year=datetime.now().year,
+        themes=themes
     )
 
-@app.route('/contact')
-def contact():
+@app.route('/<theme>')
+def questions(theme):
     """Renders the contact page."""
     return render_template(
         'contact.html',
