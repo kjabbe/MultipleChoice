@@ -13,7 +13,7 @@ def home():
     return render_template(
         'index.html',
         title='Multiple Choice',
-        theme=['ttm4137', 'test'],
+        themes = ['ttm4137', 'test'],
         year=datetime.now().year
     )
 
