@@ -3,7 +3,7 @@ Routes and views for the flask application.
 """
 import sys, re, os
 from datetime import datetime
-from flask import render_template
+from flask import render_template, request
 from FlaskWebProject import app
 import os
 # __file__ refers to the file settings.py 
@@ -25,25 +25,36 @@ def home():
 @app.route('/questions/<theme>')
 def questions(theme):
 	"""Renders the questions page."""
+	params = []
+	if (request.args.get('ans', '')):
+		 params.append(request.args.get('ans', ''))
 	try:
 		(answers, questions) = getQuestions(theme)
+		formatted = []
 		if (len(answers) == len(questions)):
-			message = None
+			message = ""
+			for question in questions:
+				newQ = question.split('%%')
+				newQ.append(answers.pop(0))
+				formatted.append(newQ)
 		else:
 			message = "Missmatch between questions and answers"	
 	except IOError:
 		print("error reading file")
 	return render_template(
 		'contact.html',
-		title=theme
+		title=theme,
+		message=message,
+		formatted=formatted,
+		params=params
 	)
 
-@app.route('/about')
-def about():
+@app.route('/questions/<theme>')
+def answer(theme, formatted, question, answer, correct):
 	"""Renders the about page."""
 	return render_template(
-		'about.html',
-		title='About',
+		'contact.html',
+		title=theme,
 		year=datetime.now().year,
 		message='Your application description page.'
 	)
@@ -64,3 +75,7 @@ def getQuestions(theme):
 			else:
 				questions.append(line)
 	return (ans, questions)
+
+#def formatQuestions(questions, answers):
+#	for i in range(len(questions)):
+		
