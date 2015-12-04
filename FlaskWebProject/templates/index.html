@@ -15,23 +15,9 @@
         <p>
             Course/theme description.
         </p>
-        <p><a class="btn btn-default" href="{{ url_for('theme') }}">Start &raquo;</a></p>
+        <p><a class="btn btn-default" href="{{ url_for('questions', theme=theme) }}">Start &raquo;</a></p>
     </div>
     {% endfor %}
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Python Tools for Visual Studio</h2>
-        <p>
-            PTVS is a free, open source plugin that turns Visual Studio into a Python IDE
-            with support for editing, browsing, IntelliSense, Azure remote debugging,
-            profiling and more.
-        </p>
-        <p><a class="btn btn-default" href="http://pytools.codeplex.com">Learn more &raquo;</a></p>
-    </div>
 </div>
 
 {% endblock %}
