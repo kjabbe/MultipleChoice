@@ -56,6 +56,7 @@ def questions(theme):
 @app.route('/questions/<title>/<item>/<qid>/<cur>')
 def checkAnswer(title, item, qid, cur):
 	"""Renders the about page."""
+	fuck = cur
 	#try:
 	#	cur = literal_eval(cur)
 	#except:
@@ -70,7 +71,6 @@ def checkAnswer(title, item, qid, cur):
 	for c in test:
 		cur.append(c.strip())
 	mod = qid
-	fuck = cur[-1]
 	if (cur[-1] == 'a'):
 		pos = 1
 	elif (cur[-1] == 'b'):
