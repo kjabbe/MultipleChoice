@@ -7,33 +7,35 @@
 	<h3>{{ message }}</h3>
 {% endif %}
 
+{% set qid = 0 %}
+
 {% for question in formatted %}
-	<div class="jumbotron" id="test">
+	<div class="jumbotron" id="{{ qid }}">
 		{% for item in question %}
 			{% if loop.first %}
 				<p class="lead">{{ item }}</p>
 			{% elif loop.last %}
-				{% if params == question[loop.last] %}
-					 <script type="text/javascript">
-						var el = document.querySelector('p');
-						var closestDiv = el.closest('div');
-						closestDiv.style.backgroundColor = "green";
-					</script>
-				{% elif params != "" %}
-					{% if params != question[loop.last] %}
-					<script type="text/javascript">
-						var el = document.querySelector('p');
-						var closestDiv = el.closest('div');
-						closestDiv.style.backgroundColor = "red";
-					</script>
-					{% endif %}
-				{% endif %}
+				<!-- -->
 			{% else %}
-				<p><a href="/questions/{{ title }}?ans={{ item }}" class="btn btn-primary btn-large">{{ item }}</a></p>
+				<!-- <p><a href="/questions/{{ title }}?ans={{ item }}" class="btn btn-primary btn-large">{{ item }}</a></p> -->
+				<p><a href="{{ url_for('checkAnswer', title=title, item=item, qid=qid, cur=question) }}" class="btn btn-primary btn-large">{{ item }}</a></p>
 			{% endif %}
 		{% endfor %}
 	</div>
+	{% set qid = qid + 1 %}
 {% endfor %}
+
+{% if correct == 1 %}
+	<script type="text/javascript">
+		var divID = document.getElementById("{{ mod }}");
+		divID.style.backgroundColor = "green";
+	</script>
+{% elif correct == 2 %}
+	<script type="text/javascript">
+		var divID = document.getElementById("{{ mod }}");
+		divID.style.backgroundColor = "red";
+	</script>
+{% endif %}
 <!--
 <address>
     One Microsoft Way<br />
