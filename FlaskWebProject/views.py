@@ -126,7 +126,7 @@ def getQuestions(theme):
 	with open(filename, 'r') as f:
 		for line in f:
 			line = line.replace('\n', '')
-			line = line.replace('?', '%3F')
+			line = line.replace('?', '')
 			if (answersRegex.match(line)):
 				ans = (line.replace('ANSWERS=','').split(','))
 			else:
