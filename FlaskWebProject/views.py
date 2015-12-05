@@ -73,6 +73,8 @@ def checkAnswer(title, item, qid, cur):
 	print ('"' + cur[-1] + '"')
 	if (cur[-1] == 'a'):
 		pos = 1
+	if ('a' in cur[-1]):
+		pos = 1
 	elif (cur[-1] == 'b'):
 		pos = 2
 	elif (cur[-1] == 'c'):
