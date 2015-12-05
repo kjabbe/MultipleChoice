@@ -9,7 +9,6 @@ import os
 # __file__ refers to the file settings.py 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))   # refers to application_top
 APP_STATIC = os.path.join(APP_ROOT, 'static')
-params = []
 
 @app.route('/')
 @app.route('/home')
@@ -26,8 +25,10 @@ def home():
 @app.route('/questions/<theme>')
 def questions(theme):
 	"""Renders the questions page."""
+	params = ""
 	if (request.args.get('ans', '')):
-		 params.append(request.args.get('ans', ''))
+		 params = (request.args.get('ans', ''))
+		 params = params.replace('%20', ' ').strip()
 	try:
 		(answers, questions) = getQuestions(theme)
 		formatted = []
@@ -35,8 +36,11 @@ def questions(theme):
 			message = ""
 			for question in questions:
 				newQ = question.split('%%')
-				newQ.append(answers.pop(0))
-				formatted.append(newQ)
+				rans = []
+				for s in newQ:
+					rans.append(s.strip())
+				rans.append(answers.pop(0))
+				formatted.append(rans)
 		else:
 			message = "Missmatch between questions and answers"	
 	except IOError:
@@ -62,7 +66,6 @@ def answer(theme, formatted, question, answer, correct):
 def getQuestions(theme):
 	#fix add a settingsfile to hold filenames etc, atleast something else than theme.lower() + _questions.txt
 	filename = os.path.join(APP_STATIC, 'files', (theme.lower() + '_questions.txt'))
-	print (filename)
 	answersRegex = re.compile('ANSWERS=')
 	ans = []
 	questions = []
@@ -71,9 +74,9 @@ def getQuestions(theme):
 			line = line.replace('\n', '')
 			if (answersRegex.match(line)):
 				ans = (line.replace('ANSWERS=','').split(','))
-				print (ans)
 			else:
 				questions.append(line)
+	
 	return (ans, questions)
 
 #def formatQuestions(questions, answers):

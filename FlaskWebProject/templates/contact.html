@@ -8,16 +8,26 @@
 {% endif %}
 
 {% for question in formatted %}
-	<div class="jumbotron">
+	<div class="jumbotron" id="test">
 		{% for item in question %}
 			{% if loop.first %}
 				<p class="lead">{{ item }}</p>
-			{% elif params %}
-				{% for i in params %}
-					<p>{{ i }}</p>
-				{% endfor %}
 			{% elif loop.last %}
-				<!--  -->
+				{% if params == question[loop.last] %}
+					 <script type="text/javascript">
+						var el = document.querySelector('p');
+						var closestDiv = el.closest('div');
+						closestDiv.style.backgroundColor = "green";
+					</script>
+				{% elif params != "" %}
+					{% if params != question[loop.last] %}
+					<script type="text/javascript">
+						var el = document.querySelector('p');
+						var closestDiv = el.closest('div');
+						closestDiv.style.backgroundColor = "red";
+					</script>
+					{% endif %}
+				{% endif %}
 			{% else %}
 				<p><a href="/questions/{{ title }}?ans={{ item }}" class="btn btn-primary btn-large">{{ item }}</a></p>
 			{% endif %}
