@@ -2,8 +2,6 @@
 Routes and views for the flask application.
 """
 import sys, re, os
-from ast import *
-#import sys, re, os
 from datetime import datetime
 from flask import render_template, request
 from FlaskWebProject import app
@@ -58,8 +56,17 @@ def questions(theme):
 @app.route('/questions/<title>/<item>/<qid>/<cur>')
 def checkAnswer(title, item, qid, cur):
 	"""Renders the about page."""
-	cur = literal_eval(cur)
-	
+	#try:
+	#	cur = literal_eval(cur)
+	#except:
+	cur = cur.replace('[', '')
+	cur = cur.replace(']', '')
+	cur = cur.replace('\'', '')
+	cur = cur.split(',')
+	test = cur
+	cur = []
+	for c in test:
+		cur.append(c.strip())
 	mod = qid
 	if (cur[-1] == 'a'):
 		pos = 1
