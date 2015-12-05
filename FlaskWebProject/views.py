@@ -1,7 +1,9 @@
 """
 Routes and views for the flask application.
 """
-import sys, re, os, ast
+import sys, re, os
+from ast import *
+#import sys, re, os
 from datetime import datetime
 from flask import render_template, request
 from FlaskWebProject import app
@@ -9,7 +11,7 @@ from FlaskWebProject import app
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))   # refers to application_top
 APP_STATIC = os.path.join(APP_ROOT, 'static')
 
-#app.debug = True
+app.debug = True
 
 @app.route('/')
 @app.route('/home')
@@ -56,7 +58,8 @@ def questions(theme):
 @app.route('/questions/<title>/<item>/<qid>/<cur>')
 def checkAnswer(title, item, qid, cur):
 	"""Renders the about page."""
-	cur = ast.literal_eval(cur)
+	cur = literal_eval(cur)
+	
 	mod = qid
 	if (cur[-1] == 'a'):
 		pos = 1
