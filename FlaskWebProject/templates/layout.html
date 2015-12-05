@@ -22,7 +22,6 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <!-- <li><a href="{{ url_for('home') }}">Home</a></li>-->
 					{% if title != "Multiple Choice" %}
                     	<li><a href="{{ url_for('questions', theme=title) }}">{{ title }}</a></li>
 					{% endif %}
