@@ -91,7 +91,7 @@ def checkAnswer(title, item, qid):
 	elif (item != question[pos] and len(item) > 0):
 		correct = 2
 	return render_template(
-		'contact.html',
+		'questions.html',
 		title=title,
 		message=message,
 		formatted=formatted,
