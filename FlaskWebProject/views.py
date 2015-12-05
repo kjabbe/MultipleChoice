@@ -54,7 +54,7 @@ def questions(theme):
 
 @app.route('/questions/<title>/<item>/<qid>')
 def checkAnswer(title, item, qid):
-	"""Renders the about page."""
+	"""Renders the questions page and checks committed answer."""
 	item = item.replace('%20', ' ').strip()
 	try:
 		(answers, questions) = getQuestions(title)
