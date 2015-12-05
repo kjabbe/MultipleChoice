@@ -32,7 +32,6 @@ def questions(theme):
 		formatted = []
 		if (len(answers) == len(questions)):
 			message = ""
-			qid = len(questions)
 			for question in questions:
 				newQ = question.split('%%')
 				rans = []
@@ -56,7 +55,6 @@ def questions(theme):
 @app.route('/questions/<title>/<item>/<qid>')
 def checkAnswer(title, item, qid):
 	"""Renders the about page."""
-	mod = qid
 	item = item.replace('%20', ' ').strip()
 	try:
 		(answers, questions) = getQuestions(title)
@@ -74,7 +72,7 @@ def checkAnswer(title, item, qid):
 			message = "Missmatch between questions and answers"	
 	except IOError:
 		print("error reading file")
-	question = formatted[int(mod)]
+	question = formatted[int(qid)]
 	if (question[-1] == 'a'):
 		pos = 1
 	elif (question[-1] == 'b'):
@@ -96,7 +94,7 @@ def checkAnswer(title, item, qid):
 		message=message,
 		formatted=formatted,
 		correct=correct,
-		mod=mod
+		qid=qid
 	)
 
 def getQuestions(theme):
