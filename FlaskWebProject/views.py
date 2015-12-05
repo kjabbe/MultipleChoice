@@ -110,11 +110,7 @@ def checkAnswer(title, item, qid, question):
 		message=message,
 		formatted=formatted,
 		correct=correct,
-		mod=mod,
-		test1=test,
-		test2=item,
-		pos=pos,
-		fuck=fuck
+		mod=mod
 	)
 
 def getQuestions(theme):
