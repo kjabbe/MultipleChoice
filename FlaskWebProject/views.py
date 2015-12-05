@@ -112,7 +112,8 @@ def checkAnswer(title, item, qid, cur):
 		correct=correct,
 		mod=mod,
 		test1=test,
-		test2=item
+		test2=item,
+		pos=pos
 	)
 
 def getQuestions(theme):
