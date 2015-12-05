@@ -70,10 +70,6 @@ def checkAnswer(title, item, qid, cur):
 	else:
 		pos = 0	
 	correct = 0
-	print (item)
-	print (cur)
-	print (pos)
-	print (cur[pos])
 	if (item == cur[pos]):
 		correct = 1
 	elif (item != cur[pos] and len(item) > 0):
