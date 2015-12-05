@@ -70,10 +70,8 @@ def checkAnswer(title, item, qid, cur):
 	for c in test:
 		cur.append(c.strip())
 	mod = qid
-	print ('"' + cur[-1] + '"')
+	fuck = cur[-1]
 	if (cur[-1] == 'a'):
-		pos = 1
-	if ('a' in cur[-1]):
 		pos = 1
 	elif (cur[-1] == 'b'):
 		pos = 2
@@ -115,7 +113,8 @@ def checkAnswer(title, item, qid, cur):
 		mod=mod,
 		test1=test,
 		test2=item,
-		pos=pos
+		pos=pos,
+		fuck=fuck
 	)
 
 def getQuestions(theme):
