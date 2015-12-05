@@ -9,7 +9,7 @@ from FlaskWebProject import app
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))   # refers to application_top
 APP_STATIC = os.path.join(APP_ROOT, 'static')
 
-#app.debug = True
+app.debug = True
 
 @app.route('/')
 @app.route('/home')
@@ -53,39 +53,10 @@ def questions(theme):
 		correct=correct,
 	)
 
-@app.route('/questions/<title>/<item>/<qid>/<question>')
-def checkAnswer(title, item, qid, question):
+@app.route('/questions/<title>/<item>/<qid>')
+def checkAnswer(title, item, qid):
 	"""Renders the about page."""
-	fuck = question
-	#try:
-	#	question = literal_eval(question)
-	#except:
-	item = item.replace('%20', ' ')
-	question = question.replace('%20', ' ')
-	question = question.replace('[', '')
-	question = question.replace(']', '')
-	question = question.replace('\'', '')
-	question = question.split(',')
-	test = question
-	question = []
-	for c in test:
-		question.append(c.strip())
 	mod = qid
-	if (question[-1] == 'a'):
-		pos = 1
-	elif (question[-1] == 'b'):
-		pos = 2
-	elif (question[-1] == 'c'):
-		pos = 3
-	elif (question[-1] == 'd'):
-		pos = 4
-	else:
-		pos = 0	
-	correct = 0
-	if (item == question[pos]):
-		correct = 1
-	elif (item != question[pos] and len(item) > 0):
-		correct = 2
 	try:
 		(answers, questions) = getQuestions(title)
 		formatted = []
@@ -104,6 +75,22 @@ def checkAnswer(title, item, qid, question):
 			message = "Missmatch between questions and answers"	
 	except IOError:
 		print("error reading file")
+	question = formatted[int(mod)]
+	if (question[-1] == 'a'):
+		pos = 1
+	elif (question[-1] == 'b'):
+		pos = 2
+	elif (question[-1] == 'c'):
+		pos = 3
+	elif (question[-1] == 'd'):
+		pos = 4
+	else:
+		pos = 0	
+	correct = 0
+	if (item == question[pos]):
+		correct = 1
+	elif (item != question[pos] and len(item) > 0):
+		correct = 2
 	return render_template(
 		'contact.html',
 		title=title,
