@@ -1,7 +1,7 @@
 """
 Routes and views for the flask application.
 """
-import sys, re, os
+import sys, re, os, ast
 from datetime import datetime
 from flask import render_template, request
 from FlaskWebProject import app
@@ -9,6 +9,8 @@ import os
 # __file__ refers to the file settings.py 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))   # refers to application_top
 APP_STATIC = os.path.join(APP_ROOT, 'static')
+
+app.debug = True
 
 @app.route('/')
 @app.route('/home')
@@ -25,18 +27,17 @@ def home():
 @app.route('/questions/<theme>')
 def questions(theme):
 	"""Renders the questions page."""
-	params = ""
-	if (request.args.get('ans', '')):
-		 params = (request.args.get('ans', ''))
-		 params = params.replace('%20', ' ').strip()
+	correct = 0
 	try:
 		(answers, questions) = getQuestions(theme)
 		formatted = []
 		if (len(answers) == len(questions)):
 			message = ""
+			qid = len(questions)
 			for question in questions:
 				newQ = question.split('%%')
 				rans = []
+				
 				for s in newQ:
 					rans.append(s.strip())
 				rans.append(answers.pop(0))
@@ -50,17 +51,58 @@ def questions(theme):
 		title=theme,
 		message=message,
 		formatted=formatted,
-		params=params
+		correct=correct,
 	)
 
-@app.route('/questions/<theme>')
-def answer(theme, formatted, question, answer, correct):
+@app.route('/questions/<title>/<item>/<qid>/<cur>')
+def testFun(title, item, qid, cur):
 	"""Renders the about page."""
+	cur = ast.literal_eval(cur)
+	mod = qid
+	if (cur[-1] == 'a'):
+		pos = 1
+	elif (cur[-1] == 'b'):
+		pos = 2
+	elif (cur[-1] == 'c'):
+		pos = 3
+	elif (cur[-1] == 'd'):
+		pos = 4
+	else:
+		pos = 0	
+	correct = 0
+	print (item)
+	print (cur)
+	print (pos)
+	print (cur[pos])
+	if (item == cur[pos]):
+		correct = 1
+	elif (item != cur[pos] and len(item) > 0):
+		correct = 2
+	try:
+		(answers, questions) = getQuestions(title)
+		formatted = []
+		if (len(answers) == len(questions)):
+			message = ""
+			qid = len(questions)
+			for question in questions:
+				newQ = question.split('%%')
+				rans = []
+				
+				for s in newQ:
+					rans.append(s.strip())
+				rans.append(answers.pop(0))
+				formatted.append(rans)
+		else:
+			message = "Missmatch between questions and answers"	
+	except IOError:
+		print("error reading file")
 	return render_template(
 		'contact.html',
-		title=theme,
-		year=datetime.now().year,
-		message='Your application description page.'
+		title=title,
+		message=message,
+		formatted=formatted,
+		correct=correct,
+		mod=mod
 	)
 
 def getQuestions(theme):
