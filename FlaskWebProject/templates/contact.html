@@ -15,7 +15,7 @@
 				<p class="lead">{{ item }}</p>
 			{% elif loop.last %}
 			{% else %}
-				<p><a href="{{ url_for('checkAnswer', title=title, item=item, qid=qid, question=question) }}" class="btn btn-primary btn-large">{{ item }}</a></p>
+				<p><a href="{{ url_for('checkAnswer', title=title, item=item, qid=qid) }}" class="btn btn-primary btn-large">{{ item }}</a></p>
 			{% endif %}
 		{% endfor %}
 	</div>
