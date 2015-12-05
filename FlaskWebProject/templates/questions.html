@@ -24,12 +24,12 @@
 
 {% if correct == 1 %}
 	<script type="text/javascript">
-		var divID = document.getElementById("{{ mod }}");
+		var divID = document.getElementById("{{ qid_last }}");
 		divID.style.backgroundColor = "green";
 	</script>
 {% elif correct == 2 %}
 	<script type="text/javascript">
-		var divID = document.getElementById("{{ mod }}");
+		var divID = document.getElementById("{{ qid_last }}");
 		divID.style.backgroundColor = "red";
 	</script>
 {% endif %}
