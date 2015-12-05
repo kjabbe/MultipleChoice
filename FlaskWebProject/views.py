@@ -55,7 +55,7 @@ def questions(theme):
 	)
 
 @app.route('/questions/<title>/<item>/<qid>/<cur>')
-def testFun(title, item, qid, cur):
+def checkAnswer(title, item, qid, cur):
 	"""Renders the about page."""
 	cur = ast.literal_eval(cur)
 	mod = qid
