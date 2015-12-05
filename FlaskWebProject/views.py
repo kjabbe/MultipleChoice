@@ -59,6 +59,8 @@ def checkAnswer(title, item, qid, cur):
 	#try:
 	#	cur = literal_eval(cur)
 	#except:
+	item = item.replace('%20', ' ')
+	cur = cur.replace('%20', ' ')
 	cur = cur.replace('[', '')
 	cur = cur.replace(']', '')
 	cur = cur.replace('\'', '')
