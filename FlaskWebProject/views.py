@@ -45,7 +45,7 @@ def questions(theme):
 	except IOError:
 		print("error reading file")
 	return render_template(
-		'contact.html',
+		'questions.html',
 		title=theme,
 		message=message,
 		formatted=formatted,
@@ -94,7 +94,7 @@ def checkAnswer(title, item, qid):
 		message=message,
 		formatted=formatted,
 		correct=correct,
-		qid=qid
+		qid_last=qid
 	)
 
 def getQuestions(theme):
