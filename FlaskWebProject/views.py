@@ -53,38 +53,38 @@ def questions(theme):
 		correct=correct,
 	)
 
-@app.route('/questions/<title>/<item>/<qid>/<cur>')
-def checkAnswer(title, item, qid, cur):
+@app.route('/questions/<title>/<item>/<qid>/<question>')
+def checkAnswer(title, item, qid, question):
 	"""Renders the about page."""
-	fuck = cur
+	fuck = question
 	#try:
-	#	cur = literal_eval(cur)
+	#	question = literal_eval(question)
 	#except:
 	item = item.replace('%20', ' ')
-	cur = cur.replace('%20', ' ')
-	cur = cur.replace('[', '')
-	cur = cur.replace(']', '')
-	cur = cur.replace('\'', '')
-	cur = cur.split(',')
-	test = cur
-	cur = []
+	question = question.replace('%20', ' ')
+	question = question.replace('[', '')
+	question = question.replace(']', '')
+	question = question.replace('\'', '')
+	question = question.split(',')
+	test = question
+	question = []
 	for c in test:
-		cur.append(c.strip())
+		question.append(c.strip())
 	mod = qid
-	if (cur[-1] == 'a'):
+	if (question[-1] == 'a'):
 		pos = 1
-	elif (cur[-1] == 'b'):
+	elif (question[-1] == 'b'):
 		pos = 2
-	elif (cur[-1] == 'c'):
+	elif (question[-1] == 'c'):
 		pos = 3
-	elif (cur[-1] == 'd'):
+	elif (question[-1] == 'd'):
 		pos = 4
 	else:
 		pos = 0	
 	correct = 0
-	if (item == cur[pos]):
+	if (item == question[pos]):
 		correct = 1
-	elif (item != cur[pos] and len(item) > 0):
+	elif (item != question[pos] and len(item) > 0):
 		correct = 2
 	try:
 		(answers, questions) = getQuestions(title)
@@ -126,6 +126,7 @@ def getQuestions(theme):
 	with open(filename, 'r') as f:
 		for line in f:
 			line = line.replace('\n', '')
+			line = line.replace('?', '%3F')
 			if (answersRegex.match(line)):
 				ans = (line.replace('ANSWERS=','').split(','))
 			else:
