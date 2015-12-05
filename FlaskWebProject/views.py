@@ -9,7 +9,7 @@ from FlaskWebProject import app
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))   # refers to application_top
 APP_STATIC = os.path.join(APP_ROOT, 'static')
 
-app.debug = True
+#app.debug = True
 
 @app.route('/')
 @app.route('/home')
@@ -57,16 +57,15 @@ def questions(theme):
 def checkAnswer(title, item, qid):
 	"""Renders the about page."""
 	mod = qid
+	item = item.replace('%20', ' ').strip()
 	try:
 		(answers, questions) = getQuestions(title)
 		formatted = []
 		if (len(answers) == len(questions)):
 			message = ""
-			qid = len(questions)
 			for question in questions:
 				newQ = question.split('%%')
 				rans = []
-				
 				for s in newQ:
 					rans.append(s.strip())
 				rans.append(answers.pop(0))
