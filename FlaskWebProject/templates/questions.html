@@ -33,4 +33,10 @@
 		divID.style.backgroundColor = "red";
 	</script>
 {% endif %}
+{% if qid_last is not none %}
+	<script>
+		window.location.hash='{{ qid_last }}';	
+	</script>
+{% endif %}
+
 {% endblock %}
