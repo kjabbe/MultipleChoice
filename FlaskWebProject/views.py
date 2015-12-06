@@ -23,7 +23,7 @@ def home():
 		themes=themes
 	)
 
-@app.route('/questions/<theme>')
+@app.route('/<theme>')
 def questions(theme):
 	"""Renders the questions page."""
 	correct = 0
@@ -52,7 +52,7 @@ def questions(theme):
 		correct=correct,
 	)
 
-@app.route('/questions/<title>/<item>/<qid>')
+@app.route('/<title>/<item>/<qid>')
 def checkAnswer(title, item, qid):
 	"""Renders the questions page and checks committed answer."""
 	item = item.replace('%20', ' ').strip()
