@@ -15,22 +15,38 @@
 				<p class="lead">{{ item }}</p>
 			{% elif loop.last %}
 			{% else %}
-				<p><a href="{{ url_for('checkAnswer', title=title, item=item, qid=qid) }}" class="btn btn-primary btn-large">{{ item }}</a></p>
+				<p><button class="btn btn-primary btn-large reply_btn">{{ item }}</button></p>
 			{% endif %}
 		{% endfor %}
 	</div>
 	{% set qid = qid + 1 %}
 {% endfor %}
-
-{% if correct == 1 %}
-	<script type="text/javascript">
-		var divID = document.getElementById("{{ qid_last }}");
-		divID.style.backgroundColor = "green";
-	</script>
-{% elif correct == 2 %}
-	<script type="text/javascript">
-		var divID = document.getElementById("{{ qid_last }}");
-		divID.style.backgroundColor = "red";
-	</script>
-{% endif %}
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.reply_btn').click(function() {
+		$.ajax({
+			'type': "POST",
+			'url': "{{ url_for('ajaxReply', title=title) }}",
+			'dataType': "json",
+			'data': {'question': $(this).closest('.jumbotron').attr('id'),
+				'answer': $(this).text()
+				},
+			'success': function(data) {
+				if(data['correct']==true) {
+					var change = "#" + data['id'];
+					$(change).css( "backgroundColor", "green" );
+					//$(this).closest('.jumbotron').css("background-color", "green");
+				} else {
+					var change = "#" + data['id'];
+					$(change).css( "backgroundColor", "red" );
+					//$(this).closest('.jumbotron').css("background-color", "red");
+				}
+			},
+            'error': function(error) {
+                alert('error');
+            }
+		});
+	});
+});
+</script>
 {% endblock %}
