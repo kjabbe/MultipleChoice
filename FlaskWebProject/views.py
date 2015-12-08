@@ -52,8 +52,6 @@ def questions(theme):
 @app.route('/questions/<title>/reply', methods=['POST'])
 def ajaxReply(title):
 	"""Renders the questions page and checks committed answer."""
-	print(request.form.get('question'))
-	print(request.form.get('answer'))
 	try:
 		questions = getQuestions(title)
 		formatted = formatQuestions(questions)
@@ -61,7 +59,6 @@ def ajaxReply(title):
 		message = 'No questions found'
 		print("error reading file")
 	answeredQuestion = formatted[int(request.form.get('question'))]
-	print(answeredQuestion[-1])
 	if (answeredQuestion[-1] == 'a'):
 		if (request.form.get('answer') == answeredQuestion[2]):
 			return jsonify(correct=True, id=request.form.get('question'))
