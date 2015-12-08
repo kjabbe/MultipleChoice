@@ -58,32 +58,9 @@ def ajaxReply(title):
 	except IOError:
 		message = 'No questions found'
 		print("error reading file")
-	answeredQuestion = formatted[int(request.form.get('question'))]
-	if (answeredQuestion[-1] == 'a'):
-		if (request.form.get('answer') == answeredQuestion[2]):
-			return jsonify(correct=True, id=request.form.get('question'))
-		else:
-			return jsonify(correct=False, id=request.form.get('question'))
-	elif (answeredQuestion[-1] == 'b'):
-		if (request.form.get('answer') == answeredQuestion[3]):
-			return jsonify(correct=True, id=request.form.get('question'))
-		else:
-			return jsonify(correct=False, id=request.form.get('question'))
-	elif (answeredQuestion[-1] == 'c'):
-		if (request.form.get('answer') == answeredQuestion[4]):
-			return jsonify(correct=True, id=request.form.get('question'))
-		else:
-			return jsonify(correct=False, id=request.form.get('question'))
-	elif (answeredQuestion[-1] == 'd'):
-		if (request.form.get('answer') == answeredQuestion[5]):
-			return jsonify(correct=True, id=request.form.get('question'))
-		else:
-			return jsonify(correct=False, id=request.form.get('question'))
-	elif (answeredQuestion[-1] == 'e'):
-		if (request.form.get('answer') == answeredQuestion[6]):
-			return jsonify(correct=True, id=request.form.get('question'))
-		else:
-			return jsonify(correct=False, id=request.form.get('question'))
+	questionDict = formatted[int(request.form.get('question'))]
+	if (questionDict['correct'] == request.form.get('answer')):
+		return jsonify(correct=True, id=request.form.get('question'))
 	else:
 		return jsonify(correct=False, id=request.form.get('question'))
 
