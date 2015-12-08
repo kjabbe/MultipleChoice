@@ -1,7 +1,7 @@
 """
 Routes and views for the flask application.
 """
-import sys, re, os
+import sys, re, os, random
 from datetime import datetime
 from flask import render_template, request, jsonify
 from FlaskWebProject import app
@@ -27,9 +27,18 @@ def home():
 def questions(theme):
 	"""Renders the questions page."""
 	message = ''
+	randomSorted = []
 	try:
 		questions = getQuestions(theme)
 		formatted = formatQuestions(questions)
+		for i in range(len(formatted)):
+			size = len(formatted)-i
+			if (size >= 1):
+				r = random.randint(0,size-1)
+			else:
+				r = 0
+			randomSorted.append(formatted[r])
+			formatted.pop(r)
 	except IOError:
 		message = 'No questions found'
 		print("error reading file")
@@ -37,7 +46,7 @@ def questions(theme):
 		'questions.html',
 		title=theme,
 		message=message,
-		formatted=formatted
+		formatted=randomSorted
 	)
 
 @app.route('/questions/<title>/reply', methods=['POST'])
@@ -52,28 +61,29 @@ def ajaxReply(title):
 		message = 'No questions found'
 		print("error reading file")
 	answeredQuestion = formatted[int(request.form.get('question'))]
+	print(answeredQuestion[-1])
 	if (answeredQuestion[-1] == 'a'):
-		if (request.form.get('answer') == answeredQuestion[1]):
-			return jsonify(correct=True, id=request.form.get('question'))
-		else:
-			return jsonify(correct=False, id=request.form.get('question'))
-	elif (answeredQuestion[-1] == 'b'):
 		if (request.form.get('answer') == answeredQuestion[2]):
 			return jsonify(correct=True, id=request.form.get('question'))
 		else:
 			return jsonify(correct=False, id=request.form.get('question'))
-	elif (answeredQuestion[-1] == 'c'):
+	elif (answeredQuestion[-1] == 'b'):
 		if (request.form.get('answer') == answeredQuestion[3]):
 			return jsonify(correct=True, id=request.form.get('question'))
 		else:
 			return jsonify(correct=False, id=request.form.get('question'))
-	elif (answeredQuestion[-1] == 'd'):
+	elif (answeredQuestion[-1] == 'c'):
 		if (request.form.get('answer') == answeredQuestion[4]):
 			return jsonify(correct=True, id=request.form.get('question'))
 		else:
 			return jsonify(correct=False, id=request.form.get('question'))
-	elif (answeredQuestion[-1] == 'e'):
+	elif (answeredQuestion[-1] == 'd'):
 		if (request.form.get('answer') == answeredQuestion[5]):
+			return jsonify(correct=True, id=request.form.get('question'))
+		else:
+			return jsonify(correct=False, id=request.form.get('question'))
+	elif (answeredQuestion[-1] == 'e'):
+		if (request.form.get('answer') == answeredQuestion[6]):
 			return jsonify(correct=True, id=request.form.get('question'))
 		else:
 			return jsonify(correct=False, id=request.form.get('question'))
@@ -94,11 +104,14 @@ def getQuestions(theme):
 
 def formatQuestions(questions):
 	return_questions = []
+	qid = 0
 	for question in questions:
 		#elementList = question.split('%%')
 		elementList = question.split('	')
 		elements = []
+		elements.append(str(qid))
 		for elem in elementList:
 			elements.append(elem.strip())
+		qid = qid + 1
 		return_questions.append(elements)
 	return return_questions
