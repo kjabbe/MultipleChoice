@@ -103,12 +103,22 @@ def formatQuestions(questions):
 	return_questions = []
 	qid = 0
 	for question in questions:
-		#elementList = question.split('%%')
+		form = {}
+		form['id'] = qid
 		elementList = question.split('	')
-		elements = []
-		elements.append(str(qid))
-		for elem in elementList:
-			elements.append(elem.strip())
+		form['question'] = elementList.pop(0)
+		correctAlt = elementList.pop(-1)
+		if (correctAlt == 'a'):
+			form['correct'] = elementList[0]
+		elif (correctAlt == 'b'):
+			form['correct'] = elementList[1]
+		elif (correctAlt == 'c'):
+			form['correct'] = elementList[2]
+		elif (correctAlt == 'd'):
+			form['correct'] = elementList[3]
+		elif (correctAlt == 'e'):
+			form['correct'] = elementList[4]
+		form['answers'] = sorted(elementList, key=lambda k: random.random())
 		qid = qid + 1
-		return_questions.append(elements)
+		return_questions.append(form)
 	return return_questions
