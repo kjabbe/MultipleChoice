@@ -1,6 +1,6 @@
 # Multiple Choice "Engine"
 
-Tool to practice on multiple choice questions, scaleable on both number of questions and courses/themes.  
+Tool to practice on multiple choice questions, scalable on both number of questions and courses/themes.  
 
 Provide questions in the static/files folder, add name to the list of courses/themes in the home view.
 At the moment support for questions with 4 answers and one correct, hopefully dynamic ranges shortly      
