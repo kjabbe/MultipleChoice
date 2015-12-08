@@ -95,7 +95,8 @@ def getQuestions(theme):
 def formatQuestions(questions):
 	return_questions = []
 	for question in questions:
-		elementList = question.split('%%')
+		#elementList = question.split('%%')
+		elementList = question.split('	')
 		elements = []
 		for elem in elementList:
 			elements.append(elem.strip())
