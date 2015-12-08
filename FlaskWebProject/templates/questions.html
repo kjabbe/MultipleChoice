@@ -9,11 +9,11 @@
 
 {% set qid = 0 %}
 {% for question in formatted %}
-	<div class="jumbotron" id="{{ qid }}">
+	<div class="jumbotron" id="{{ question[0] }}">
 		{% for item in question %}
-			{% if loop.first %}
+			{% if loop.index0 == loop.first +1 %}
 				<p class="lead">{{ item }}</p>
-			{% elif loop.last %}
+			{% elif loop.last or loop.first %}
 			{% else %}
 				<p><button class="btn btn-primary btn-large reply_btn">{{ item }}</button></p>
 			{% endif %}
