@@ -8,14 +8,10 @@
 {% endif %}
 
 {% for question in formatted %}
-	<div class="jumbotron" id="{{ question[0] }}">
-		{% for item in question %}
-			{% if loop.index0 == loop.first +1 %}
-				<p class="lead">{{ item }}</p>
-			{% elif loop.last or loop.first %}
-			{% else %}
-				<p><button class="btn btn-primary btn-large reply_btn">{{ item }}</button></p>
-			{% endif %}
+	<div class="jumbotron" id="{{ question['id'] }}">
+		<p class="lead">{{ question['question'] }}</p>
+		{% for answer in question['answers'] %}
+			<p><button class="btn btn-primary btn-large reply_btn">{{ answer }}</button></p>
 		{% endfor %}
 	</div>
 {% endfor %}
