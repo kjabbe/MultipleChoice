@@ -1,0 +1,220 @@
+Question	Topic
+Does CCMP provide confidentiality, integrity, or both?
+Does EAP-SIM provide mutual authentication?
+Does Windows 10 Wi-Fi Sense allow sharing of 802.11i keys?
+Does Windows 10 Wi-Fi Sense enforce access control to wireless networks?
+Does WPA support TKIP, CCMP or both?
+How are EAP messages transported between the authenticator and the authentication server in RSN?
+How are EAP messages transported between the supplicant and authenticator in WPA/RSN?
+How are the fragmentation and chopchop attacks different from the PTW attack?
+How does initialization vector (IV) reuse compromise confidentiality?
+How does the counter mode operation of a block cipher E() work?
+How does the integrity check value (ICV) in WEP protect against message modification?
+How does WEP provide replay protection?
+How is IEEE 802.11 CCMP nonce input constructed?
+How is the 128 bits start value of the counter for CCMP encryption initialized in RSN?
+How is the 64-bit message integrity code (MIC) value in CCMP derived from the 128-bit final block?
+How is the counter in CCMP initialized?
+How is the IEEE 802.11 CCMP nonce input constructed?
+How is the integrity check value (ICV) in WEP computed?
+How is the PMK distributed in RSN?
+How long is the CCMP header, and how long is the packet number contained in this header?
+How long is the integrity check value (ICV) in WEP?
+How long is the IV used in TKIP?
+How long is the IV used in TKIP?
+How long is the PTK when CCMP is used?
+How long is the PTK when TKIP is used?
+How many EAP-TLS messages are exchanged in an EAP-TLS handshake?
+How many messages are exchanged in a group key handshake?
+How many messages are exchanged in the WEP shared key authentication?
+How many messages are exchanged in the WPS in-band registration protocol?
+How many states does the 802.11 State Machine contain?
+How many TKIP sequence numbers does a receiver keep track of?
+Is the complete MAC PDU encrypted by the CCMP?
+Is the same key used for authentication and encryption in WEP?
+Is they MIC key be recovered in the attack on TKIP by Beck & Tews?
+The PTK is a collection of several keys. List these keys and their length when CCMP is used:
+The PTK is a collection of several keys. List these keys and their length when TKIP is used:
+What are the consequences of the chopchop-like attack on TKIP by Beck & Tews?
+What are the consequences of the fragmentation attacks, e.g., by Bittau et al. ?
+What are the five input values to the CCMP Decryption block?
+What are the four input values to the CCMP Encryption block?
+What are the four types of EAPOL messages used in WPA/RSN?
+What are the input elements to the pseudo-random function used to compute the PTK?
+What are the RAND, SRES and Kc values in an EAP-SIM triplet?
+What encapsulates EAP messages in RSN?
+What is 'Michael' in WPA/RSN?
+What is a mutable field in CCMP?
+What is an RC4 weak key?
+What is an RSN group key?
+What is ARP re-injection used for in the attacks on WEP?
+What is EAP?
+What is EAPOL, and how is it used in WPA/RSN?
+What is Extensible Authentication Protocol (EAP)?
+What is Michael in WPA/RSN?
+What is the 128-bit start value for RSN CCMP encryption?
+What is the block length of AES as used in RSN?
+What is the consequence of the PTW attack on WEP?
+What is the format of the first block used for the CBC-MAC computation in CCMP?
+What is the key size of AES as used in RSN?
+What is the length of the Kc value used in EAP-SIM?
+What is the length of the WEP initialization vector (IV)?
+What is the major weakness in WEP, exploited by the PTW attack used in the lab?
+What is the problem with the WEP authentication protocol (which is therefore rarely used in practice)?
+What is the purpose of the EAPOL 4-way handshake?
+What is the purpose of the first phase of PEAP?
+What is the purpose of the first two messages of the WPS in-band registration protocol?
+What is the purpose of the second phase of PEAP?
+What is the Rijndael algorithm?
+What is the technical problem in the session hijacking threat in 802.11/WLAN?
+What kind of security capabilities are supported in a transitional security network (TSN)?
+What properties of TKIP are exploited in the chopchop-like attack on TKIP by Beck & Tews?
+What type of 802.11 authentication does Algorithm Number 0 or 1 indicate?
+Which frame types are cryptographically protected  by 802.11i?
+Which frame types are cryptographically protected by 802.11w?
+Which block cipher mode of operation is used for AES in RSN?
+Which block cipher mode of operation is used for AES in RSN?
+Which cryptographic algorithm is used by CCMP?
+Which cryptographic algorithm is used by TKIP?
+Which cryptographic algorithm is used in counter mode with cipher block chaining message authentication code protocol  in CCMP?
+Which cryptographic algorithm is used in counter mode with cipher block chaining message authentication code protocol (CCMP)?
+Which encryption algorithm is used in WEP?
+Which identity does the EAP-Identity response in EAP-SIM contain?
+Which message type triggers a transition to 802.11 State 1?
+Which of the following is a security concern with Windows 10 Wi-Fi Sense?
+Which parts of an MPDU encrypted under CCMP are not encrypted?
+Which protocol encapsulates the EAP messages transported between the supplicant and authenticator in WPA/RSN?
+Which protocol encapsulates the EAP messages transported between the supplicant and authenticator in WPA/RSN?
+Which protocol state will an 802.11 STA be in after having received a deauthentication notification message?
+Which RADIUS attribute contains the encrypted Pairwise Master Key (PMK) in WPA?
+Which security method is used in the first phase of PEAP?
+Which standard actually enabled practical DoS attacks on 802.11i TKIP? 
+Which stream cipher is used for WEP encryption?
+Which three entities participate in 802.1X access control?
+Which three entities participate in the WPS configuration process?
+Will TKIP accept a frame with a TKIP sequence counter value which is 14 less than the largest one seen so far?
+Can a 3G USIM work in an LTE UE handset?
+Can the security header in MAPsec be encrypted? Why/why not?
+Do 3G/UMTS networks provide mutual authentication?
+Does a successful run of EPS authentication achieve mutual authentication between mobile station and serving network?
+Does EAP-SIM provide mutual authentication?
+Does EPS provide end-to-end data security?
+Does GSM provide mutual authentication?
+Does LTE/EPS provide end-to-end data security?
+Does the use of TMSIs protect the IMSI from active attackers?
+Explain the purpose and output of the functions f0-f9 used in UMTS.
+How does the 3G/UMTS authentication improve the security over the GSM authentication?
+How does the EPS authentication improve the security over the 3G/UMTS authentication?
+How does the USIM authenticate the network during 3G/UMTS authentication?
+How is backward key separation achieved during handovers over X2 connections in EPS?
+How is forward key separation achieved during handovers over X2 connections in EPS?
+How is the EPS key derivation function constructed?
+How is the mode of the 3GPP f9 algorithm different from the CBC-MAC mode?
+How is the subscriber identity protected from radio channel eavesdropping in GSM?
+How is the subscriber identity protected from radio channel eavesdropping in UMTS?
+How is the user identity protected in GSM?
+How long are the cipher key (CK) and integrity key (IK) used in UTRAN, and how are they obtained if a GSM SIM is used to access a UTRAN?
+How long is the keystream block output by the f8 algorithm?
+How long is the session key K_c used in GSM?
+How many rounds does the KASUMI cipher use?
+How the initial RRC connection request message is sent in UMTS Security Setup Procedure?
+In which mode of operation is KASUMI used for constructing the 3GPP f8 key stream generator?
+Is mutual authentication provided when a SIM is used to access a UTRAN?
+Is the network domain security for the core network sufficient to protect the UMTS/LTE authentication and key agreement messages against parallel session attacks?
+List the message authentication codes (MACs) used in UMTS and explain their purpose.
+Sketch the 3GPP f8 stream cipher structure, using the KASUMI function as a black box.
+Sketch the 3GPP f9 cipher structure, using the KASUMI function as a black box.
+The end points of the user data encryption in EPS are 2011
+What are the components of the authentication token (AUTN) used in 3G/UMTS networks?
+What are the consequences of the false base station attack on GSM?
+What are the consequences of the redirection attack against UMTS authentication?
+What are the contents of the AUTS parameter in 3G/UMTS networks, and what is it used for?
+What are the end points of signalling encryption in the EPS access stratum?
+What are the end points of signalling integrity in the EPS non-stratum access?
+What are the end points of user data encryption in UMTS?
+What are the inputs of the authentication function A3 used in GSM?
+What are the inputs to the f8 algorithm used in UMTS, and what are their lengths?
+What are the inputs to the f9 algorithm used in UMTS, and what are their lengths?
+What are the MILENAGE functions in UMTS used for?
+What are the purpose of the MILENAGE functions in UMTS?
+What are the three functional requirements for UMTS authentication?
+What are the three most important security features in GSM?
+What are the two basic strategies for creating SQNs in 3G/UMTS networks?
+What are the variables of the authentication token (AUTN) used in UMTS networks?
+What happens if the result of the UTRAN algorithm negotiation is that the user equipment (UE) and network have no encryption algorithms in common?
+What happens if the result of the UTRAN algorithm negotiation is that the user equipment (UE) and network have no integrity protection algorithms in common?
+What is a call session control function (CSCF)?
+What is cryptographic network separation (in EPS)?
+What is lawful interception?
+What is required to spoof a de-registration message in user de-registration request spoofing?
+What is Snow 3G and why is it used in UMTS and EPS?
+What is the 3GPP value OP, and what is the length of this value?
+What is the bit length of the permanent subscriber key in UMTS?
+What is the block length of the block cipher used by MILENAGE?
+What is the block size of the KASUMI function used by the f8 algorithm?
+What is the content and use of the UMTS AUTS parameter?
+What is the length of the cipher key CK used in UMTS?
+What is the length of the permanent subscriber key K in UMTS?
+What is the length of the user’s secret key in GSM technology?
+What is the output of the authentication function A3 used in GSM?
+What is the output of the UMTS $f9$ algorithm?
+What is the purpose of the sequence number (SQN) used in 3G/UMTS networks?
+What kind of cipher is KASUMI?
+What was the underlying assumption for the MILENAGE security analysis?
+Where are the UMTS functions f1-f5, f1* and f5* implemented?
+Where does the key derivation function KDF of EPS reside?
+Where is the secret user key K_i used in GSM stored?
+Where is the sequence number (SQN) used in 3G/UMTS networks generated?
+Which authentication data does the GSM VLR have to request?
+Which authentication method is used by IMS?
+Which cipher mode does the 3GPP f8 stream cipher use?
+Which CSCF handles SIP registration requests and informs the Home Subscriber Server (HSS)?
+Which encryption schemes are specified in EPS?
+Which function is used to generate the key K_c in GSM?
+Which GSM entities store the secret user keys Ki?
+Which part of IEEE 802.16 MAC PDU is encrypted?
+Which three modes does the confidentiality algorithm in UMTS support?
+Which UMTS entities implement the functions f1-f5, f1* and f5*?
+Which UTRAN layer provides handovers, preparations for handovers to GSM and cell reselection?
+Which UTRAN layer provides integrity protection?
+Which UTRAN layers provide encryption?
+Which values are sent from the AuC to the VLR/SGSN during 3G/UMTS authentication?
+Which values are sent from the HLR/AuC to the VLR during GSM authentication?
+Which values are sent from the HSS to the MME during the LTE/EPS authentication protocol?
+Which WiMAX entity is generating the Traffic Encryption Key (TEK)?  2010
+Why are the keys CK & IK generated in EPS even though they are not directly used?
+Why can the USIM be removed from the rest of the UE?
+Why does EPS provide a more complex key hierarchy than UMTS and GSM?
+Why is the NAS Security Mode Command message in EPS never encrypted?
+Why is the redirection attack against UMTS authentication possible?
+Why is the UICC normally easily removable from the mobile station?
+Why must the USIM implementation be tamper-proof?
+Will 3G USIMs work with EPS UE handsets?
+Can a keyed checksum be used as message authentication code?
+Does breaking collision resistance of a hash function imply breaking pre-image resistance or the other way around?
+Does breaking collision resistance of a hash function imply breaking second pre-image resistance or the other way around?
+Does EPID have a mechanism for key revocation?
+How can one show that P ? NP if one can prove the existence of one-way functions.
+How to solve the potential malicious traffic discovery problem in WIDS?
+Intuitively, what does it mean for a message authentication code to be 'existentially unforgeable against chosen message attacks'?
+Is a stream cipher as secure as the one-time pad?
+Is a stream cipher malleable?
+Is the CBC-MAC a secure message authentication code if the IV is constant 0 ?
+What are the advantages of the counter mode of encryption, e.g., in comparison to the CBC mode?
+What are the entities in EPID?
+What are the general steps performed by intrusion detection systems for mobile ad-hoc networks?
+What are the problems with Intrusion Detection System in real life?
+What are the problems with MAC Sequence Number Analysis in Intrusion Detection Systems?
+What are the two main security functionalities of a smart card?
+What is Internet Key Exchange?
+What is lawful interception in mobile communication networks?
+What is the difference between a checksum and a cryptographic message authentication code?
+What is the difference between a smart card and a SIM?
+What is the difference between a stream cipher and the one-time pad?
+What is the main difference between wired and wireless Intrusion Detection Systems in terms of functionality?
+What is the problem with MAC Sequence Number Analysis in Intrusion Detection Systems?
+What is the purpose of the EPID 'join' procedure?
+Why can the USIM be removed from the rest of the UE?
+Why is it a security requirement that the USIM implementation must be tamperproof?
+Why is it not sufficient to base the construction of a one-way function f on an NP-hard problem (i.e. Where inverting f requires solving an NP-hard problem)?
+Why is the UICC normally easily removable from the mobile station?	
