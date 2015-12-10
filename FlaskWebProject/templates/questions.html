@@ -28,10 +28,10 @@ $(document).ready(function(){
 			'success': function(data) {
 				var change = "#" + data['id'];
 				if(data['correct']==true) {
-					$(change).css( "backgroundColor", "green" );
+					$(change).css( "backgroundColor", "#197819" );
 					but.css( "backgroundColor", "#274773" );
 				} else {
-					$(change).css( "backgroundColor", "red" );
+					$(change).css( "backgroundColor", "#BC3E3E" );
 					but.css( "backgroundColor", "grey" );
 				}
 			},
