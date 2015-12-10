@@ -6,7 +6,7 @@ How many message integrity failures have to be logged in order the Temporal Key 
 In RSN,the encryption and message authentication are realized via	AES-GCM	AES-CBC	AES-HMAC	AES-CCMP	d
 How big is the message integrity code in RSN	32 bits	48 bits	64 bits	128 bits	c
 What is Extensible Authentication Protocol (EAP)?	EAP is a set of encapsulation messages for upper-layer authentication methods	EAP is a set of encapsulation messages for physical layer authentication methods	EAP is a set of encapsulation messages for PKI authentication methods	EAP is a set of encapsulation messages for RADIUS server authentication methods	a
-In GSM, what is the role of the Visitor Location Register:	When mobile equipment register to the network, to retrieve the information for that equipment from HLR.	To protect the anonymity of the owner of the mobile equipment.	To obtain a session key from HLR.	To communicate the user’s Authentication Center (AuC).	a
+In GSM, what is the role of the Visitor Location Register:	When mobile equipment register to the network, to retrieve the information for that equipment from HLR.	To protect the anonymity of the owner of the mobile equipment.	To obtain a session key from HLR.	To communicate the user's Authentication Center (AuC).	a
 Which security mechanism is NOT present in GSM:	Authentication	Confidentiality	Anonymity	Authorization	d
 In GSM, what is the role of A8 algorithm:	For production of random numbers	For encryption key generation	For user authentication	For Data encryption	b
 The function f6( ) in the MAPsec protocol of UMTS is:	AES in counter mode	AES in CBC mode	KASUMI in counter mode	KASUMI in CBC mode	a
