@@ -15,7 +15,7 @@ app.debug = True
 @app.route('/home')
 def home():
 	"""Renders the home page."""
-	themes = ['TTM4137_2014', 'TTM4137_2013']
+	themes = ['TTM4137_2014', 'TTM4137_2013', 'TTM4137_2012']
 	return render_template(
 		'index.html',
 		title='Multiple Choice',
