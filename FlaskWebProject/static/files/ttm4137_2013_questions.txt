@@ -20,6 +20,6 @@ In UMTS, the security mechanisms employed between the Mobile Station and the Rad
 In LTE, the Home Subscriber Server has the following information:	policy control and decision-making rules	IP address allocation for the UE	buffer of downlink data while the MME paging	information about the PDNs	d
 In LTE, E-UTRAN is the part of the whole system infrastructure responsible for the:	radio access network	circuit switch core network	packet switch core network	evolved packet core network	a
 How many security levels has LTE?	5	4	3	2	a
-The following component IS NOT a part of the RFID technology	Transceiver – Tag Reader	Transponder – RFID tag	Antenna	Infra Red Analog/Digital Converter	d
+The following component IS NOT a part of the RFID technology	Transceiver-Tag Reader	Transponder-RFID tag	Antenna	Infra Red Analog/Digital Converter	d
 The EPCGen2 tag is	A passive tag that allows just low-speed reading and sortation	An Active tag that allows high-speed reading and sortation	A passive tag that allows high-speed reading and sortation	An Active tag that allows just low- speed reading and sortation	c
-In RFID, the usual budget for implementation of the cryptographic primitives is:	100 – 200 gates	200 – 500 gates	500 – 1000 gates	200 – 2000 gates	d
+In RFID, the usual budget for implementation of the cryptographic primitives is:	100-200 gates	200-500 gates	500-1000 gates	200-2000 gates	d
