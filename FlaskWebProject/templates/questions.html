@@ -18,22 +18,21 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	$('.reply_btn').click(function() {
+		var but = $(this);
 		$.ajax({
 			'type': "POST",
 			'url': "{{ url_for('ajaxReply', title=title) }}",
 			'dataType': "json",
 			'data': {'question': $(this).closest('.jumbotron').attr('id'),
-				'answer': $(this).text()
-				},
+				'answer': $(this).text()},
 			'success': function(data) {
+				var change = "#" + data['id'];
 				if(data['correct']==true) {
-					var change = "#" + data['id'];
 					$(change).css( "backgroundColor", "green" );
-					//$(this).closest('.jumbotron').css("background-color", "green");
+					but.css( "backgroundColor", "#274773" );
 				} else {
-					var change = "#" + data['id'];
 					$(change).css( "backgroundColor", "red" );
-					//$(this).closest('.jumbotron').css("background-color", "red");
+					but.css( "backgroundColor", "grey" );
 				}
 			},
             'error': function(error) {
