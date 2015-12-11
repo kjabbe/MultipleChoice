@@ -1,4 +1,4 @@
-Is the same key used for both authentication and encryption in WEP?	Yes, if 802.1X authentication is not used	The same key is never used twice	No 	Yes	d
+Is the same key used for both authentication and encryption in WEP?	Yes, if 802.1X authentication is not used	The same key is never used twice	No	Yes	d
 What is the major weakness in WEP, exploited by the PTW attack used in the lab?	Too short IV	No protection against message replay	The integrity check value	The IV is part of key stream	b
 What is EAP?	Extensible Authentication Protocol is a set of encapsulation messages for mutual authentication methods	Extensible Authentication Protocol is a set of encapsulation messages for smartcartd-based authentication methods	Extensible Authentication Protocol is a set of encapsulation messages for upper-layer authentication methods	Extensible Authentication Protocol is a set of authentication server methods	c
 How are EAP messages transported between the authenticator and the authentication server in RSN?	EAP messages are encapsulated in TCP/IP	EAP messages are encapsulated in EAP-TLS	EAP messages are encapsulated in VPN	EAP messages are encapsulated in 802.1X	a
