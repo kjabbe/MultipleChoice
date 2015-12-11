@@ -1,5 +1,5 @@
 Which stream cipher is used for WEP encryption:	AES.	DES.	RC4.	RC5.	c
-What is the length of the WEP initialization vector (IV):	24 bits.	32 bits.	48 bits. 64 bits.	a
+What is the length of the WEP initialization vector (IV):	24 bits.	32 bits.	48 bits.	64 bits.	a
 How many messages are exchanged in the WEP shared key authentication protocol:	2.	3.	4.	5.	c
 Is the same key used for both authentication and encryption in WEP:	Yes.	No.	Yes, if 802.1X authentication is not used.	The same key is never used twice.	a
 What is an RC4 weak key value:	A key value where many bits of the first bytes of the plaintext are leaked when an IV collision occurs.	A key value where a few bits in the key determine many bits in the first few bytes of the key stream.	A key value where a few bits in the key determine many bits in the cipher text.	A key value where the bits in the key determine the bits in the first few bytes of the key stream.	b
