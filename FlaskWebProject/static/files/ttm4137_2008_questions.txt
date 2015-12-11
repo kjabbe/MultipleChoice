@@ -1,0 +1,25 @@
+Which stream cipher is used for WEP encryption:	AES.	DES.	RC4.	RC5.	c
+What is the length of the WEP initialization vector (IV):	24 bits.	32 bits.	48 bits. 64 bits.	a
+How many messages are exchanged in the WEP shared key authentication protocol:	2.	3.	4.	5.	c
+Is the same key used for both authentication and encryption in WEP:	Yes.	No.	Yes, if 802.1X authentication is not used.	The same key is never used twice.	a
+What is an RC4 weak key value:	A key value where many bits of the first bytes of the plaintext are leaked when an IV collision occurs.	A key value where a few bits in the key determine many bits in the first few bytes of the key stream.	A key value where a few bits in the key determine many bits in the cipher text.	A key value where the bits in the key determine the bits in the first few bytes of the key stream.	b
+Which cryptographic algoithm is used in counter mode with cipher block chaining message authentication code protocol (CCMP):	AES.	Michael.	RC4.	TLS.	a
+Which three roles participate in the 802.1X access control protocol:	Station, authenticator and authentication center.	Client, server and RADIUS server.	Supplocant, access point and RADIUS server.	Supplicant, authenticator and authentication server.	d
+How many EAP-TLS messages are exchanged in an EAP-TLS handshake:	2.	4.	9.	It varies with the TLS parameters exchanged.	c
+What encapsulates EAP messages in RSN:	They are encapsulated in TCP/IP.	They are encapsulated in EAPOL messages.	They are encapsulated in RADIUS messages.	They are encapsulated in EAPOL and RADIUS messages.	d
+Does EAP-SIM provide mutual authentication:	No, it uses the regular GSM authentication.	Yes, by the regular GSM authentication and the authentication token from the AuC.	Yes, by the regular GSM authentication and a nonce in the encrypted AP response.	Yes it uses the regular UMTS authentication.	c
+What is the purpose of the EAPOL 4-way handshake:	To compute a fresh pairwise temporal key (PTK) from the pairwise master key (PMK).	To compute a fresh pairwise master key (PMK) from the pairwise transient key (PTK).	To compute a fresh pairwise transiet key (PTK) from the pairwise master key (PMK) after both parties have verified the PMK.	To compute a fresh pairwise message key (PMK) fron the pairwise trusted key (PTK) generated in the 4-way key agreement.	c
+How long is the IV used in TKIP:	24 bits.	48 bits.	64 bits.	128 bits.	b
+What is the key size of AES as used in RSN:	128 bits.	192 bits.	256 bits.	512 bits.	a
+What is the block size of AES as used in RSN:	64 bits.	128 bits.	256 bits.	512 bits.	b
+Is the complete MAC PDU encrypted by the CCMP:	Yes, the CCMP uses a shared key.	No, the MAC header is encrypted.	No, the CCMP header is not encrypted.	No, the MAC header and the CCMP header are not encrypted.	d
+Which GSM entities store the secret user keys Ki:	MS and HLR.	VLR and AuC.	SIM and AuC.	SIM, BS and VLR.	c
+What is the output of the GSM authentication function A3:	MAC (32-bit message authentication code).	MAC (64-bit message authentication code).	SRES (32-bit signet response).	SRES (64-bit signed response).	c
+Which authentication data does the GSM VLR have to request:	The authentication quintet (RAND, AUTN, XRES, CK, IK).	The authentication quintet (RAND, AUTN, XRES, Ki, Kc).	The authentication triplet (RAND, XRES, Ki).	The authentication triplet (RAND, XRES, Kc).	d
+What are the variables of the authentication token (AUTN) used in UMTS networks:	SQN XOR AK, XRES, MAC.	SQN XOR AK, AMF, MAC.	SQN, AMF, MAC, RAND.	SQN XOR AK, AMF, MAC, RAND.	b
+Which UTRAN layer provides integrity protection:	MAC layer.	RLC layer.	RRC layer.	Physical layer.	c
+What happens if the result of the UTRAN algorithm negotiation is that the user equipment (UE) and network have no integrity protection algorithems in common:	The network may establish the connection without integrity protection.	The connection is shut down immediately by the network.	The network may establish the connection with the default integrity protection algorithm.	UTRAN does not use integrity algorithm negotiation.	b
+How is the traffic between the terminal equipment and Proxy CSCF (P-CSCF) protected in IMS:	Using the UMTS f8 encryption algorithm with the cipher key CK.	Using IPsec Authentication Header (AH).	Using IPsec Encapsulation Security Payload (ESP).	It is not protected at all, but the UTRAN radio link is protected by the UMTS security mechanisms.	c
+Which authentication method is used by IMS:	Internet Key Exchange (IKE).	IPsec Authentication Header (AH).	IPsec Encapsulated Security Payload (ESP).	UMTS Authentication and key agreement (AKA).	d
+What is the length of the cipher key CK used in UMTS:	56 bits.	64 bits.	128 bits.	256 bits.	c
+Which UMTS entities implement the functions f1-f5, f1* and f5*:	USIM, UE and BS.	SGSN and AuC.	USIM and AuC.	USIM, BSC and AuC.	c
