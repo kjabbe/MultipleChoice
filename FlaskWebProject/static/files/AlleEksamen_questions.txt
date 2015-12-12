@@ -17,7 +17,8 @@ What is the length of the users secret key in GSM technology	There is no such a 
 In GSM, when a mobile is switched on, it registers its current location in a	Authentication Centre	Roaming Data Center	Visitor Location Register	Home Location Register	Nearest Base station	d
 "Protect against someone tracking the location of the user or identifying calls made or from the user by eavesdropping on the radio path" is the following GSM security feature	Encryption	Handover	Authentication	Confidentiality	Anonymity	e
 In UMTS what kind of protection provides the "Protection mode 2" of MPSec	Both integrity protection and encryption	Just integrity Protection	Just encryption	Just message authentication	No protection	a
-What is the crucial protocol in IMS	DH key-exchange	AuC protocol	Session Initiation protocol	The proxy CSCF	The Interrogating CSCF	cWhich stream cipher is used for WEP encryption:	AES.	DES.	RC4.	RC5.	c
+What is the crucial protocol in IMS	DH key-exchange	AuC protocol	Session Initiation protocol	The proxy CSCF	The Interrogating CSCF	c
+Which stream cipher is used for WEP encryption:	AES.	DES.	RC4.	RC5.	c
 What is the length of the WEP initialization vector (IV):	24 bits.	32 bits.	48 bits.	64 bits.	a
 How many messages are exchanged in the WEP shared key authentication protocol:	2.	3.	4.	5.	c
 Is the same key used for both authentication and encryption in WEP:	Yes.	No.	Yes, if 802.1X authentication is not used.	The same key is never used twice.	a
