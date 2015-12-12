@@ -1,0 +1,145 @@
+does ccmp provide confidentiality integrity or both
+does windows 10 wifi sense allow sharing of 80211i keys
+does windows 10 wifi sense enforce access control to wireless networks
+does wpa support tkip ccmp or both
+how are eap messages transported between the supplicant and authenticator in wpa/rsn
+how are the fragmentation and chopchop attacks different from the ptw attack
+how does initialization vector iv reuse compromise confidentiality
+how does the integrity check value icv in wep protect against message modification
+how does wep provide replay protection
+how is ieee 80211 ccmp nonce input constructed
+how is the 64bit message integrity code mic value in ccmp derived from the 128bit final block
+how is the counter in ccmp initialized
+how is the integrity check value icv in wep computed
+how is the pmk distributed in rsn
+how long is the ccmp header and how long is the packet number contained in this header
+how long is the integrity check value icv in wep
+how long is the ptk when ccmp is used
+how long is the ptk when tkip is used
+how many messages are exchanged in a group key handshake
+how many messages are exchanged in the wps inband registration protocol
+how many states does the 80211 state machine contain
+how many tkip sequence numbers does a receiver keep track of
+is they mic key be recovered in the attack on tkip by beck  tews
+the ptk is a collection of several keys list these keys and their length when ccmp is used
+the ptk is a collection of several keys list these keys and their length when tkip is used
+what are the consequences of the fragmentation attacks eg by bittau et al 
+what are the five input values to the ccmp decryption block
+what are the four input values to the ccmp encryption block
+what are the input elements to the pseudorandom function used to compute the ptk
+what are the rand sres and kc values in an eapsim triplet
+what is a mutable field in ccmp
+what is an rc4 weak key
+what is an rsn group key
+what is arp reinjection used for in the attacks on wep
+what is eapol and how is it used in wpa/rsn
+what is the consequence of the ptw attack on wep
+what is the format of the first block used for the cbcmac computation in ccmp
+what is the length of the kc value used in eapsim
+what is the problem with the wep authentication protocol which is therefore rarely used in practice
+what is the purpose of the first two messages of the wps inband registration protocol
+what is the purpose of the second phase of peap
+what is the rijndael algorithm
+what is the technical problem in the session hijacking threat in 80211/wlan
+what kind of security capabilities are supported in a transitional security network tsn
+what properties of tkip are exploited in the chopchoplike attack on tkip by beck  tews
+what type of 80211 authentication does algorithm number 0 or 1 indicate
+which frame types are cryptographically protected  by 80211i
+which frame types are cryptographically protected by 80211w
+which block cipher mode of operation is used for aes in rsn
+which cryptographic algorithm is used by ccmp
+which cryptographic algorithm is used by tkip
+which cryptographic algorithm is used in counter mode with cipher block chaining message authentication code protocol ccmp
+which encryption algorithm is used in wep
+which identity does the eapidentity response in eapsim contain
+which message type triggers a transition to 80211 state 1
+which of the following is a security concern with windows 10 wifi sense
+which parts of an mpdu encrypted under ccmp are not encrypted
+which protocol state will an 80211 sta be in after having received a deauthentication notification message
+which radius attribute contains the encrypted pairwise master key pmk in wpa
+which standard actually enabled practical dos attacks on 80211i tkip
+which three entities participate in the wps configuration process
+will tkip accept a frame with a tkip sequence counter value which is 14 less than the largest one seen so far
+can a 3g usim work in an lte ue handset
+do 3g/umts networks provide mutual authentication
+does a successful run of eps authentication achieve mutual authentication between mobile station and serving network
+does lte/eps provide endtoend data security
+does the use of tmsis protect the imsi from active attackers
+explain the purpose and output of the functions f0f9 used in umts
+how does the 3g/umts authentication improve the security over the gsm authentication
+how does the eps authentication improve the security over the 3g/umts authentication
+how does the usim authenticate the network during 3g/umts authentication
+how is backward key separation achieved during handovers over x2 connections in eps
+how is the eps key derivation function constructed
+how is the mode of the 3gpp f9 algorithm different from the cbcmac mode
+how is the subscriber identity protected from radio channel eavesdropping in umts
+how is the user identity protected in gsm
+how long are the cipher key ck and integrity key ik used in utran and how are they obtained if a gsm sim is used to access a utran
+how long is the keystream block output by the f8 algorithm
+how long is the session key k_c used in gsm
+how the initial rrc connection request message is sent in umts security setup procedure
+is the network domain security for the core network sufficient to protect the umts/lte authentication and key agreement messages against parallel session attacks
+list the message authentication codes macs used in umts and explain their purpose
+sketch the 3gpp f8 stream cipher structure using the kasumi function as a black box
+sketch the 3gpp f9 cipher structure using the kasumi function as a black box
+the end points of the user data encryption in eps are 2011
+what are the components of the authentication token autn used in 3g/umts networks
+what are the consequences of the false base station attack on gsm
+what are the contents of the auts parameter in 3g/umts networks and what is it used for
+what are the end points of signalling encryption in the eps access stratum
+what are the end points of signalling integrity in the eps nonstratum access
+what are the end points of user data encryption in umts
+what are the inputs to the f8 algorithm used in umts and what are their lengths
+what are the inputs to the f9 algorithm used in umts and what are their lengths
+what are the milenage functions in umts used for
+what are the two basic strategies for creating sqns in 3g/umts networks
+what happens if the result of the utran algorithm negotiation is that the user equipment ue and network have no encryption algorithms in common
+what is cryptographic network separation in eps
+what is lawful interception
+what is required to spoof a deregistration message in user deregistration request spoofing
+what is snow 3g and why is it used in umts and eps
+what is the 3gpp value op and what is the length of this value
+what is the bit length of the permanent subscriber key in umts
+what is the block length of the block cipher used by milenage
+what is the block size of the kasumi function used by the f8 algorithm
+what is the length of the permanent subscriber key k in umts
+what is the length of the user�s secret key in gsm technology
+where are the umts functions f1f5 f1* and f5* implemented
+where is the secret user key k_i used in gsm stored
+where is the sequence number sqn used in 3g/umts networks generated
+which cipher mode does the 3gpp f8 stream cipher use
+which encryption schemes are specified in eps
+which function is used to generate the key k_c in gsm
+which part of the ieee 80216 mac pdu is encrypted
+which utran layer provides handovers preparations for handovers to gsm and cell reselection
+which values are sent from the auc to the vlr/sgsn during 3g/umts authentication
+which values are sent from the hlr/auc to the vlr during gsm authentication
+which values are sent from the hss to the mme during the lte/eps authentication protocol
+why are the keys ck  ik generated in eps even though they are not directly used
+why does eps provide a more complex key hierarchy than umts and gsm
+why is the nas security mode command message in eps never encrypted
+why is the redirection attack against umts authentication possible
+will 3g usims work with eps ue handsets
+can a keyed checksum be used as message authentication code
+does breaking collision resistance of a hash function imply breaking preimage resistance or the other way around
+does breaking collision resistance of a hash function imply breaking second preimage resistance or the other way around
+does epid have a mechanism for key revocation
+how can one show that p  np if one can prove the existence of oneway functions
+how to solve the potential malicious traffic discovery problem in wids
+intuitively what does it mean for a message authentication code to be 'existentially unforgeable against chosen message attacks'
+is a stream cipher as secure as the onetime pad
+is a stream cipher malleable
+is the cbcmac a secure message authentication code if the iv is constant 0 
+what are the advantages of the counter mode of encryption eg in comparison to the cbc mode
+what are the entities in epid
+what are the problems with intrusion detection system in real life
+what are the problems with mac sequence number analysis in intrusion detection systems
+what are the two main security functionalities of a smart card
+what is internet key exchange
+what is lawful interception in mobile communication networks
+what is the difference between a smart card and a sim
+what is the difference between a stream cipher and the onetime pad
+what is the main difference between wired and wireless intrusion detection systems in terms of functionality
+what is the purpose of the epid 'join' procedure
+why is it a security requirement that the usim implementation must be tamperproof
+why is it not sufficient to base the construction of a oneway function f on an nphard problem ie where inverting f requires solving an nphard problem
