@@ -1,0 +1,48 @@
+Which wireless technology has only limited reliability according to the speed of the movement of the mobile equipment	GSM	GPRS	UMTS	Bluetooth	WiFi	d
+
+Wich wireless technology offers the highest transmission rates	GSM	GPRS	UMTS	Bluetooth	WiFi	e
+
+What type of the attack is the attack guided by the following motivation: The attacker wants to steal information, damage your system because of a grievance, or alter your system to acquire tangible reward	Profit or revenge	Profit	Revenge 	Gaming	Ego	a
+
+Which one of the following attacks is NOT classified as a wireless attack 	Snooping	Meet in the middle	Modification	Masquerading	Denial of Service	b
+
+What is one-time password	You use one unique password for all your logons and connections 	Each and every time you logon or connect, you use a new password	You use a password with a time stamp in them 	A password that you use for generating the master key	A password that you use for generating a session key 	b
+
+In the wireless communication terminology what the abbreviation MAC stands for	Message Authentication Code 	Media Access Controll	Mobile Authentication Code	Medium Accessibility Coding 	Military Air Command 	b
+
+According to the IEEE 802 standard, what is the right ordring of the layers 	MAC Layer, IP Layer, TCP Layer LLC Layer, Application Layer 	MAC Layer, LLC Layer, IP Layer, TCP Layer, Application Layer 	LLC Layer, MAC Layer, TCP Layer, IP Layer, Application Layer 	MAC Layer, LLC Layer, TCP Layer, IP Layer, Application Layer 	b
+
+If a station moves only within BSS, the this type of mobility is known as 	No transistion mobility 	BSS Transition 	Limited BSS transition ESS transition 	ESS Transition 	Limited ESS transition 	a
+
+If station or AP sends a notice for association termination, then that service is known as 	Association 	Reassociation 	Disassociation	Deassociation	Quitassociation 	c
+
+The original 802.11 standard operated on the following frequencies 	2.4GHz 	2.4-5 GHz 	900MHz 	1.2 GHz 	900MHz - 1.3GHz 	a
+
+The maximal data rate per channel in the original 802.11 standard was 	54Mbps	16Mbps	11Mbps	4Mbps	2Mbps	e
+
+How many IVs are available in WEP	2^24	2^64	2^128	0	24	a
+
+What is true for WEP	Mobile station and the access point get a session key from the LAN	Mobile station have a master key and produces a session key for the access point	Mobile station sends a key to the access point	Mobile station have a different key than the access point	Mobile station shares key with access point 	e
+
+In Wi-Fi what is the gold standard	That was the first certification standard that came from Motorola	That was the second security standard that came from an alliance of hardware producers	The pin connection in the mobile equipment has to be made by gold	The pin connection in the mobile equipment has to be made by gold or silver 	To obtain the Wi-Fi certification - the product has to be compatible with the set of gold standard products 	e
+
+What encryption algorithm is used in WPA	RC4 with 40 bits key	RC4 with 104 bits key	AES with 128 bits key	RC4 with 128 bits key	AES with 256 bits key	d
+
+What is the length of the users secret key in GSM technology	There is no such a security in GSM	56 bits 	64 bits 	96bits 	128 bits	e
+
+In GSM, when a mobile is switched on, it registers its current location in a 	Authentication Centre	Roaming Data Center 	Visitor Location Register 	Home Location Register 	Nearest Base station 	d
+
+"Protect against someone tracking the location of the user or identifying calls made or from the user by eavesdropping on the radio path" is the following GSM security feature 	Encryption 	Handover 	Authentication	Confidentiality 	Anonymity 	e
+
+
+In UMTS what kind of protection provides the "Protection mode 2" of MPSec	Both integrity protection and encryption 	Just integrity Protection 	Just encryption 	Just message authentication 	No protection 	a
+
+What is the crucial protocol in IMS 	DH key-exchange 	AuC protocol 	Session Initiation protocol 	The proxy CSCF 	The Interrogating CSCF 	c
+
+
+
+
+
+
+
+
