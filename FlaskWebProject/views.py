@@ -46,7 +46,7 @@ def questions(theme):
 		'questions.html',
 		title=theme,
 		message=message,
-		formatted=randomSorted
+		formatted=formatted
 	)
 
 @app.route('/questions/<title>/reply', methods=['POST'])
