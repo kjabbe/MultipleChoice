@@ -31,14 +31,14 @@ def questions(theme):
 	try:
 		questions = getQuestions(theme)
 		formatted = formatQuestions(questions)
-		for i in range(len(formatted)):
-			size = len(formatted)-i
-			if (size >= 1):
-				r = random.randint(0,size-1)
-			else:
-				r = 0
-			randomSorted.append(formatted[r])
-			formatted.pop(r)
+		#for i in range(len(formatted)):
+		#	size = len(formatted)-i
+		#	if (size >= 1):
+		#		r = random.randint(0,size-1)
+		#	else:
+		#		r = 0
+		#	randomSorted.append(formatted[r])
+		#	formatted.pop(r)
 	except IOError:
 		message = 'No questions found'
 		print("error reading file")
