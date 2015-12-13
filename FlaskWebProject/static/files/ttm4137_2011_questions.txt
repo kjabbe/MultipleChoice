@@ -18,7 +18,7 @@ Why can the USIM be physically removed from the rest of the UE?:	The UC manufact
 What is the bit length of the permanent subscriber key in UTMS?:	56	64	128	256	c
 Theend points of the user data encryption in EPS are:	The UICC and the eNB.	The UE and the MME.	The UE and the eNB	The UICCand the MME.	c
 The end points of a signal-message encryption in the EPS access stratum are:	The UICC and the eNB.	The UE and the eNB.	The eNB and the MME.	The UE and the MME.	b
-The end points of signal-message integrity protection in the EPS non-stratum access are:	The UICC and the eNB.	The UE and the eNB.	The eNB and the MME.	The UE and the MME.	d	
+The end points of signal-message integrity protection in the EPS non-stratum access are:	The UICC and the eNB.	The UE and the eNB.	The eNB and the MME.	The UE and the MME.	d
 Does LTE/EPS provide end-to-end data security?:	No.	Yes, but only authenticity.	Yes, but only anonymity.	Yes, both confidentiality and authenticity.	a
 Can 3G USIM work in an LTE UE handset?:	No, beacause the cryptkeys must be kept in the USIM.	No, because the cryptkeys are not compatible.	Yes, because the USIM cryptkey output is the same in the two systems	Yes, because the crytpkeys are the same in both systems.	c
 Where does the key derivation function KDF of EPS reside?:	In the USIM and the AuC.	Inn the USIM and the UE.	In the UE and the MME.	In the UE and the HSS.	d
