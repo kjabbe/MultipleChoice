@@ -9,7 +9,7 @@ from FlaskWebProject import app
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))   # refers to application_top
 APP_STATIC = os.path.join(APP_ROOT, 'static')
 
-app.debug = True
+#app.debug = True
 
 @app.route('/')
 @app.route('/home')
@@ -31,14 +31,14 @@ def questions(theme):
 	try:
 		questions = getQuestions(theme)
 		formatted = formatQuestions(questions)
-		#for i in range(len(formatted)):
-		#	size = len(formatted)-i
-		#	if (size >= 1):
-		#		r = random.randint(0,size-1)
-		#	else:
-		#		r = 0
-		#	randomSorted.append(formatted[r])
-		#	formatted.pop(r)
+		for i in range(len(formatted)):
+			size = len(formatted)-i
+			if (size >= 1):
+				r = random.randint(0,size-1)
+			else:
+				r = 0
+			randomSorted.append(formatted[r])
+			formatted.pop(r)
 	except IOError:
 		message = 'No questions found'
 		print("error reading file")
@@ -46,7 +46,7 @@ def questions(theme):
 		'questions.html',
 		title=theme,
 		message=message,
-		formatted=formatted
+		formatted=randomSorted
 	)
 
 @app.route('/questions/<title>/reply', methods=['POST'])
