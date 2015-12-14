@@ -17,8 +17,6 @@
 	</div>
 {% endfor %}
 <script type="text/javascript">
-var counter = 0;
-var failed = 0;
 $(document).ready(function(){
 	$('.reply_btn').click(function() {
 		var but = $(this);
@@ -30,16 +28,16 @@ $(document).ready(function(){
 				'answer': $(this).text()},
 			'success': function(data) {
 				var change = "#" + data['id'];
+				var correctCount = data['nofCorrect'];
+				var failedCount = data['nofFail'];
 				if(data['correct']==true) {
-					counter = counter + 1;
 					$(change).css( "backgroundColor", "#007f52" );
 					but.css( "backgroundColor", "#274773" );
-					document.getElementById("score").innerHTML = counter + "/{{ tot }}";					
+					document.getElementById("score").innerHTML = correctCount + "/{{ tot }}";					
 				} else {
-					failed = failed + 1;
 					$(change).css( "backgroundColor", "#BC3E3E" );
 					but.css( "backgroundColor", "grey" );
-					document.getElementById("fail").innerHTML = "You have picked wrong answer " + failed + " time(s)";
+					document.getElementById("fail").innerHTML = "You have picked wrong answer " + failedCount + " time(s)";
 				}
 			},
             'error': function(error) {
