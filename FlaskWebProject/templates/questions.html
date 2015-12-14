@@ -18,6 +18,7 @@
 {% endfor %}
 <script type="text/javascript">
 var counter = 0;
+var failed = 0;
 $(document).ready(function(){
 	$('.reply_btn').click(function() {
 		var but = $(this);
@@ -35,8 +36,10 @@ $(document).ready(function(){
 					but.css( "backgroundColor", "#274773" );
 					document.getElementById("score").innerHTML = counter + "/{{ tot }}";					
 				} else {
+					fail = fail + 1;
 					$(change).css( "backgroundColor", "#BC3E3E" );
 					but.css( "backgroundColor", "grey" );
+					document.getElementById("fail").innerHTML = "You have picked wrong answer " + failed + "time(s)";
 				}
 			},
             'error': function(error) {
