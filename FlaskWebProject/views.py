@@ -46,7 +46,8 @@ def questions(theme):
 		'questions.html',
 		title=theme,
 		message=message,
-		formatted=randomSorted
+		formatted=randomSorted,
+		tot=len(randomSorted)
 	)
 
 @app.route('/questions/<title>/reply', methods=['POST'])
@@ -70,12 +71,10 @@ def getQuestions(theme):
 	#fix add a settingsfile to hold filenames etc, atleast something else than theme.lower() + _questions.txt
 	filename = os.path.join(APP_STATIC, 'files', (theme.lower() + '_questions.txt'))
 	questions = []
-	print (filename)
 	with open(filename, 'r') as f:
 		for line in f:
 			line = line.replace('\n', '')
 			questions.append(line)
-	print (questions)
 	return questions
 
 def formatQuestions(questions):

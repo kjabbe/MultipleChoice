@@ -34,8 +34,12 @@
     <div class="container body-content">
         {% block content %}{% endblock %}
         <hr />
-        <footer>
-            <!-- <p>{{ title }}</p> -->
+        <footer class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+					<li><a id="score"></a></li>
+				</ul>
+            </div>
         </footer>
     </div>
 

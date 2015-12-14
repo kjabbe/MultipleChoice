@@ -17,6 +17,7 @@
 	</div>
 {% endfor %}
 <script type="text/javascript">
+var counter = 0;
 $(document).ready(function(){
 	$('.reply_btn').click(function() {
 		var but = $(this);
@@ -29,8 +30,10 @@ $(document).ready(function(){
 			'success': function(data) {
 				var change = "#" + data['id'];
 				if(data['correct']==true) {
+					counter = counter + 1;
 					$(change).css( "backgroundColor", "#007f52" );
 					but.css( "backgroundColor", "#274773" );
+					document.getElementById("score").innerHTML = counter + "/{{ tot }}";					
 				} else {
 					$(change).css( "backgroundColor", "#BC3E3E" );
 					but.css( "backgroundColor", "grey" );
