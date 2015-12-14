@@ -102,7 +102,7 @@ What is the purpose of the sequence number (SQN) used in UMTS:	Preventing replay
 What happens if the result of the UTRAN algorithm negotiation is that the user equipment (UE) and the network do not have a common encryption algorithm?	UTRAN provides a new encryption algorithm as an app	The connection is dhut down immediately by UTRAN	UTRAN may establish the connection without encryption	UTRAN does not use encryption algorithm negotiation	c
 What is lawfull interception in mobile communication networks?:	Eavsdropping performed on behalf of the police authorities.	Siganl jamming by the police authorities.	Law enforcement cammand to the mobil operators to turn off the communication encryption in order to enable eavsdropping.	Eavsdroppinf approved by judicial court.	d
 In which mode oof operation is KASUMI used for constructing the 3GPP f8 key stream generator?:	Combining Counter Mode and ECB-mode.	Combining Counter Mode and CCM-mode.	Combining Counter Mode and CBC-mode.	Combining Counter Mode and OFB-mode.	d
-What is the bit length of the permanent subscriber key in UTMS?: 56	64	128	256	c
+What is the bit length of the permanent subscriber key in UTMS?:	56	64	128	256	c
 What is the length of the users secret key in GSM technology	56 bits	64 bits	96bits	128 bits	d
 Which UMTS entities implement the functions f1-f5, f1* and f5*:	USIM, UE and BS.	SGSN and AuC.	USIM and AuC.	USIM, BSC and AuC.	c
 Which GSM entities store the secret user keys Ki:	MS and HLR.	VLR and AuC.	SIM and AuC.	SIM, BS and VLR.	c
