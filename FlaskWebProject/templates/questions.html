@@ -36,10 +36,10 @@ $(document).ready(function(){
 					but.css( "backgroundColor", "#274773" );
 					document.getElementById("score").innerHTML = counter + "/{{ tot }}";					
 				} else {
-					fail = fail + 1;
+					failed = failed + 1;
 					$(change).css( "backgroundColor", "#BC3E3E" );
 					but.css( "backgroundColor", "grey" );
-					document.getElementById("fail").innerHTML = "You have picked wrong answer " + failed + "time(s)";
+					document.getElementById("fail").innerHTML = "You have picked wrong answer " + failed + " time(s)";
 				}
 			},
             'error': function(error) {
