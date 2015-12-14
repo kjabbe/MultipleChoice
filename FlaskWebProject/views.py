@@ -3,21 +3,24 @@ Routes and views for the flask application.
 """
 import sys, re, os, random
 from datetime import datetime
-from flask import render_template, request, jsonify
+from flask import render_template, request, session, jsonify
+from flask.ext.session import Session
 from FlaskWebProject import app
 # __file__ refers to the file settings.py 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))   # refers to application_top
 APP_STATIC = os.path.join(APP_ROOT, 'static')
 
-SESSION_CORRECT = 0
-SESSION_FAILED = 0
+app.secret_key = os.urandom(24)
+app.config['SESSION_TYPE'] = 'filesystem'
+Session(app)
 
-#app.debug = True
+app.debug = True
 
 @app.route('/')
 @app.route('/home')
 def home():
 	"""Renders the home page."""
+	session['nofCorrect'] = '0'
 	themes = ['URNmedSvar', 'TTM4137_2014', 'TTM4137_2013', 'TTM4137_2012', 'TTM4137_2011', 'TTM4137_2010', 'TTM4137_2009', 'TTM4137_2008', 'TTM4137_2007', 'AlleEksamen']
 	return render_template(
 		'index.html',
@@ -56,8 +59,6 @@ def questions(theme):
 @app.route('/questions/<title>/reply', methods=['POST'])
 def ajaxReply(title):
 	"""Renders the questions page and checks committed answer."""
-	global SESSION_FAILED
-	global SESSION_CORRECT
 	try:
 		questions = getQuestions(title)
 		formatted = formatQuestions(questions)
@@ -65,17 +66,12 @@ def ajaxReply(title):
 		message = 'No questions found'
 		print("error reading file")
 	questionDict = formatted[int(request.form.get('question'))]
-
 	if (questionDict['correct'] == request.form.get('answer')):
-		SESSION_CORRECT = SESSION_CORRECT + 1
-		retCor = str(SESSION_CORRECT)
-		retFail = str(SESSION_FAILED)
-		return jsonify(correct=True, id=request.form.get('question'), nofCorrect=retCor, nofFail=retFail)
+		session['nofCorrect'] = int(session['nofCorrect']) + 1
+		return jsonify(correct=True, id=request.form.get('question'), nofCorrect=session['nofCorrect'])
 	else:
-		SESSION_FAILED = SESSION_FAILED + 1
-		retFail = str(SESSION_FAILED)
-		retCor = str(SESSION_CORRECT)
-		return jsonify(correct=False, id=request.form.get('question'), nofCorrect=retCor, nofFail=retFail)
+		#session['nofCorrect'] = int(session['nofCorrect']) - 1
+		return jsonify(correct=False, id=request.form.get('question'), nofCorrect=session['nofCorrect'])
 
 
 	

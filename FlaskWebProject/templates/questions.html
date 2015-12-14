@@ -28,16 +28,15 @@ $(document).ready(function(){
 				'answer': $(this).text()},
 			'success': function(data) {
 				var change = "#" + data['id'];
-				var correctCount = data['nofCorrect'];
-				var failedCount = data['nofFail'];
 				if(data['correct']==true) {
 					$(change).css( "backgroundColor", "#007f52" );
 					but.css( "backgroundColor", "#274773" );
-					document.getElementById("score").innerHTML = correctCount + "/{{ tot }}";					
+					document.getElementById("score").innerHTML = data['nofCorrect'] + "/{{ tot }}";					
 				} else {
 					$(change).css( "backgroundColor", "#BC3E3E" );
 					but.css( "backgroundColor", "grey" );
-					document.getElementById("fail").innerHTML = "You have picked wrong answer " + failedCount + " time(s)";
+					document.getElementById("score").innerHTML = data['nofCorrect'] + "/{{ tot }}";	
+					//document.getElementById("fail").innerHTML = "You have picked wrong answer " + 'session["nofFail"]' + " time(s)";
 				}
 			},
             'error': function(error) {
