@@ -14,7 +14,7 @@ app.secret_key = os.urandom(24)
 app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
-app.debug = True
+#app.debug = True
 
 @app.route('/')
 @app.route('/home')
