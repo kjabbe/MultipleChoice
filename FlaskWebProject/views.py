@@ -20,7 +20,6 @@ app.debug = True
 @app.route('/home')
 def home():
 	"""Renders the home page."""
-	session['nofCorrect'] = 'correct=0'
 	themes = ['URNmedSvar', 'TTM4137_2014', 'TTM4137_2013', 'TTM4137_2012', 'TTM4137_2011', 'TTM4137_2010', 'TTM4137_2009', 'TTM4137_2008', 'TTM4137_2007', 'AlleEksamen']
 	return render_template(
 		'index.html',
@@ -34,6 +33,7 @@ def questions(theme):
 	"""Renders the questions page."""
 	message = ''
 	randomSorted = []
+	session['nofCorrect'] = 'correct=0'
 	try:
 		questions = getQuestions(theme)
 		formatted = formatQuestions(questions)
