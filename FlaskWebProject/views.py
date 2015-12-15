@@ -20,7 +20,7 @@ app.debug = True
 @app.route('/home')
 def home():
 	"""Renders the home page."""
-	session['nofCorrect'] = '0'
+	session['nofCorrect'] = 'correct=0'
 	themes = ['URNmedSvar', 'TTM4137_2014', 'TTM4137_2013', 'TTM4137_2012', 'TTM4137_2011', 'TTM4137_2010', 'TTM4137_2009', 'TTM4137_2008', 'TTM4137_2007', 'AlleEksamen']
 	return render_template(
 		'index.html',
@@ -59,6 +59,8 @@ def questions(theme):
 @app.route('/questions/<title>/reply', methods=['POST'])
 def ajaxReply(title):
 	"""Renders the questions page and checks committed answer."""
+	sess = session['nofCorrect'].split(',')
+	count = int(sess[0].replace('correct=', ''))
 	try:
 		questions = getQuestions(title)
 		formatted = formatQuestions(questions)
@@ -67,11 +69,17 @@ def ajaxReply(title):
 		print("error reading file")
 	questionDict = formatted[int(request.form.get('question'))]
 	if (questionDict['correct'] == request.form.get('answer')):
-		session['nofCorrect'] = int(session['nofCorrect']) + 1
-		return jsonify(correct=True, id=request.form.get('question'), nofCorrect=session['nofCorrect'])
+		if request.form.get('question') not in sess:
+			session['nofCorrect'] += ',' + request.form.get('question')
+			count += 1
+			session['nofCorrect'] = re.sub(r'correct=[0-9]+','correct=' + str(count),session['nofCorrect'])
+			#session['nofCorrect'] = int(session['nofCorrect']) + 1
+		return jsonify(correct=True, id=request.form.get('question'), nofCorrect=count)
 	else:
+		if request.form.get('question') not in sess:
+			session['nofCorrect'] += ',' + request.form.get('question')
 		#session['nofCorrect'] = int(session['nofCorrect']) - 1
-		return jsonify(correct=False, id=request.form.get('question'), nofCorrect=session['nofCorrect'])
+		return jsonify(correct=False, id=request.form.get('question'), nofCorrect=count)
 
 
 	
